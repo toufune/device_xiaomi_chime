@@ -120,9 +120,6 @@ BOARD_USES_LEGACY_IMS_SEPOLICY := true
 $(call soong_config_set,libinit,vendor_init_lib,init_chime)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_chime
 
-# Media
-TARGET_USES_ION := true
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
