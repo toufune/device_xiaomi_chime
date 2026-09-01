@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # APN
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/overlays/CarrierConfig/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Audio
