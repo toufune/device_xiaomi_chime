@@ -70,7 +70,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1
 BOARD_RAMDISK_USE_LZ4 := true
-#TARGET_KERNEL_CLANG_VERSION := r522817
 override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 
 # Platform
@@ -89,8 +88,6 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 TARGET_SCREEN_DENSITY := 440
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_DRM_PP := true
-#TARGET_USES_GRALLOC1 := true
-#TARGET_USES_GRALLOC4 := true
 TARGET_GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE := true
 TARGET_GRALLOC_HANDLE_HAS_NO_UBWCP := true
 TARGET_USES_HWC2 := true
@@ -125,10 +122,6 @@ BOARD_USES_METADATA_PARTITION := true
 # NFC
 ODM_MANIFEST_SKUS += lemon
 ODM_MANIFEST_LEMON_FILES := $(DEVICE_PATH)/configs/vintf/manifest_lemon.xml
-
-# Power
-#TARGET_USES_INTERACTION_BOOST := true
-#TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
@@ -206,9 +199,6 @@ USE_SENSOR_MULTI_HAL := true
 
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
-
-# Touchpanel
-#TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
