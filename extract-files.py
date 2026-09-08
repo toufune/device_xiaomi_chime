@@ -91,6 +91,7 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
+    module.add_proprietary_file('proprietary-files-recovery.txt')
     utils = ExtractUtils.device(module)
     utils.run()
 
